@@ -1,0 +1,9 @@
+- name: Reboot Linux machine
+  hosts: servers
+  gather_facts: no
+  remote_user: serveradmin
+  become: true
+  tasks:
+    - name: Reboot the machine
+      ansible.builtin.reboot:
+        reboot_timeout: 600  # Timeout in seconds

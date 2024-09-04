@@ -1,0 +1,9 @@
+- hosts: servers
+  gather_facts: no
+  remote_user: serveradmin
+  become: true
+  tasks:
+    - name: apt
+      apt:
+        update_cache: yes
+        upgrade: 'yes'

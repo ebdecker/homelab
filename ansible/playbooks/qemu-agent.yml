@@ -1,0 +1,16 @@
+- name: install latest qemu-guest-agent
+  hosts: servers
+  gather_facts: no
+  remote_user: serveradmin
+  become: true
+  tasks:
+    - name: install qemu-guest-agent
+      apt:
+        name: qemu-guest-agent
+        state: present
+        update_cache: true
+    - name: Make sure qemu-guest-agent is started
+      systemd:
+        name: qemu-guest-agent.service
+        state: started
+      become: true
