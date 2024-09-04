@@ -61,3 +61,28 @@ Standard image is currently pulling a golden image from Proxmox that was setup v
 - https://austinsnerdythings.com/2021/09/01/how-to-deploy-vms-in-proxmox-with-terraform/
 
 ---
+
+## Ansible
+Ansible provides open-source automation that reduces complexity and runs everywhere. Using Ansible lets you automate virtually any task. [Ansible Introduction](https://docs.ansible.com/ansible/latest/getting_started/introduction.html)
+
+
+Currently, I have playbooks for basic bootstrap automation after my proxmox cluster and initial VMs are setup. These include
+- docker setup
+- apt update
+- qemu guest agent install
+- reboot
+
+Update the hosts file per your current environment.
+To test connection with hosts:
+```bash
+ansible -i hosts servers -m ping --user serveradmin
+```
+Ansible commands must be ran on a machine with ssh keys already added to the target machine. If not using ssh keys, you could run a similar command with the password argument
+
+I was going to add playbooks to boot strap the inital k3s-ha install and configuration but this linked repo does a much better job than I could do and it worked right out of the box [k3s-ansible on GitHub](https://github.com/techno-tim/k3s-ansible) Shoutout to Techno-Tim.
+
+### References
+- https://github.com/techno-tim/k3s-ansible
+- https://github.com/techno-tim/k3s-ansible
+
+---
