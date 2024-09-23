@@ -71,6 +71,7 @@ Currently, I have playbooks for basic bootstrap automation after my proxmox clus
 - apt update
 - qemu guest agent install
 - reboot
+- reboot-required (check if system reboot is required)
 
 Update the hosts file per your current environment.
 To test connection with hosts:
