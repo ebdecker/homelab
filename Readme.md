@@ -31,7 +31,7 @@ Terraform is an infrastructure as code tool that lets you build, change, and ver
 
 The current terraform is setup to bootstrap the initial Proxmox VMs for use in K3S HA architecture See here for architecture reference: https://docs.k3s.io/datastore/ha-embedded 
 
-2 additionals VMs, 1 for running standalone Docker containers the other for installing and setting up a Rancher cluster.
+1 additional vm for installing and setting up a Rancher cluster.
 
 Not currently managing state with this Terraform, but in the future could store state management on a drive somewhere on my Proxmox node.
 

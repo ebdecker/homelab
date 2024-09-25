@@ -4,7 +4,7 @@
 module "ella_class_vms" {
   source = "./modules/proxmox_vms"
 
-  vm_id_list = ["101", "102", "103", "107", "108"]
+  vm_id_list = ["101", "102", "103", "107"]
   vm_class_name = "pve-ella"
   vm_template_name = "ubuntu-server-noble"
   proxmox_node_name = "pve"
@@ -18,7 +18,7 @@ module "ella_class_vms" {
 module "elliot_class_vms" {
   source = "./modules/proxmox_vms"
 
-  vm_id_list = ["104", "105", "106"]
+  vm_id_list = ["104"]
   vm_class_name = "pve-elliot"
   vm_template_name = "ubuntu-server-noble"
   proxmox_node_name = "pve"
