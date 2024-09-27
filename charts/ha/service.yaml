@@ -4,6 +4,8 @@ kind: Service
 metadata:
   name: home-assistant
   namespace: ha
+  annotations:
+    metallb.universe.tf/loadBalancerIPs: 192.168.0.111
 spec:
   type: LoadBalancer
   selector:
